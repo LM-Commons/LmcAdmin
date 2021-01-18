@@ -1,3 +1,6 @@
+>
+> This is work in progress to convert to Laminas
+>
 # ZfcAdmin Module for Zend Framework
 Created by [Jurian Sluiman](http://juriansluiman.nl) and [Martin Shwalbe](https://github.com/Hounddog).
 

@@ -1,12 +1,12 @@
 {
-    "name": "zf-commons/zfc-admin",
-    "description": "A generic Admin module for ZF2.",
+    "name": "lm-commons/lmc-admin",
+    "description": "A generic Admin module for Laminas MVC.",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
-        "zf2"
+        "laminas"
     ],
-    "homepage": "https://github.com/juriansluiman/ZfcAdmin",
+    "homepage": "https://github.com/juriansluiman/LmcAdmin",
     "authors": [
         {
             "name": "Jurian Sluiman ",
@@ -19,26 +19,26 @@
         }
     ],
     "require": {
-        "php": "^5.5 || ^7.0",
-        "zendframework/zend-modulemanager": "^2.5",
-        "zendframework/zend-loader": "^2.5",
-        "zendframework/zend-eventmanager": "^2.5 || ^3.0",
-        "zendframework/zend-mvc": "^2.5 || ^3.0",
-        "zendframework/zend-navigation": "^2.5"
+        "php": "^7.3",
+        "laminas/laminas-modulemanager": "^2.5",
+        "laminas/laminas-loader": "^2.6",
+        "laminas/laminas-eventmanager": "^3.0",
+        "laminas/laminas-mvc": "^3.0",
+        "laminas/laminas-navigation": "^2.10"
     },
     "suggest": {
-        "bjyoungblood/bjy-authorize": "Access control to protect ZfcAdmin against unauthorized users"
+        "lm-commons/lmc-rbac-mvc": "Access control to protect LmcAdmin against unauthorized users"
     },
     "autoload": {
         "psr-4": {
-            "ZfcAdmin\\": "src/"
+            "LmcAdmin\\": "src/"
         }
     },
     "extra": {
-        "zf": {
-            "component": "ZfcAdmin",
+        "lm": {
+            "component": "LmcAdmin",
             "config-provider": [
-                "ZfcAdmin\\ConfigProvider"
+                "LmcAdmin\\ConfigProvider"
             ]
         }
     }

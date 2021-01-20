@@ -32,14 +32,14 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @package     ZfcAdmin
+ * @package     LmcAdmin
  * @author      Jurian Sluiman <jurian@soflomo.com>
  * @copyright   2012 Jurian Sluiman.
  * @license     http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link        http://zf-commons.github.com
+ * @link        https://github.com/LM-Commons
  */
 
-namespace ZfcAdmin;
+namespace LmcAdmin;
 
 /**
  * Class ConfigProvider.
@@ -56,9 +56,10 @@ class ConfigProvider
         return [
             'dependencies' => $this->getDependencyConfig(),
             'view_manager' => $this->getViewManagerConfig(),
-            'zfcadmin' => $this->getModuleConfig(),
+            'lmcadmin' => $this->getModuleConfig(),
         ];
     }
+    
     /**
      * Provide dependency configuration for an application.
      *

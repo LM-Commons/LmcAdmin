@@ -41,7 +41,6 @@
 
 namespace LmcAdmin;
 
-use Laminas\Loader;
 use Laminas\EventManager\EventInterface;
 use Laminas\Mvc\MvcEvent;
 use Laminas\Router\RouteMatch as V3RouteMatch;

@@ -32,17 +32,17 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @package     ZfcAdmin
+ * @package     LmcAdmin
  * @subpackage  Controller
  * @author      Jurian Sluiman <jurian@soflomo.com>
  * @copyright   2012 Jurian Sluiman.
  * @license     http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link        http://zf-commons.github.com
+ * @link        https://github.com/LM-Commons
  */
 
-namespace ZfcAdmin\Controller;
+namespace LmcAdmin\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 /**
  * Placeholder controller
@@ -59,7 +59,7 @@ use Zend\Mvc\Controller\AbstractActionController;
  * return array(
  *     'router' => array(
  *         'routes' => array(
- *             'zfcadmin' => array(
+ *             'lmcadmin' => array(
  *                 'options' => array(
  *                     'defaults' => array(
  *                         'controller' => 'MyFoo\Controller\OtherController',
@@ -72,7 +72,7 @@ use Zend\Mvc\Controller\AbstractActionController;
  * );
  * </code>
  *
- * @package    ZfcAdmin
+ * @package    LmcAdmin
  * @subpackage Controller
  */
 class AdminController extends AbstractActionController

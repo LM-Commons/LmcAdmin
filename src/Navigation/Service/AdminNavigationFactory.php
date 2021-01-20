@@ -32,22 +32,22 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @package     ZfcAdmin
+ * @package     LmcAdmin
  * @subpackage  Navigation\Service
  * @author      Jurian Sluiman <jurian@soflomo.com>
  * @copyright   2012 Jurian Sluiman.
  * @license     http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link        http://zf-commons.github.com
+ * @link        https://zf-commons.github.com
  */
 
-namespace ZfcAdmin\Navigation\Service;
+namespace LmcAdmin\Navigation\Service;
 
-use Zend\Navigation\Service\DefaultNavigationFactory;
+use Laminas\Navigation\Service\DefaultNavigationFactory;
 
 /**
- * Factory for the ZfcAdmin admin navigation
+ * Factory for the LmcAdmin admin navigation
  *
- * @package    ZfcAdmin
+ * @package    LmcAdmin
  * @subpackage Navigation\Service
  */
 class AdminNavigationFactory extends DefaultNavigationFactory

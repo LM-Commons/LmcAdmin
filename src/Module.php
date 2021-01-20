@@ -32,42 +32,28 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @package     ZfcAdmin
+ * @package     LmcAdmin
  * @author      Jurian Sluiman <jurian@soflomo.com>
  * @copyright   2012 Jurian Sluiman.
  * @license     http://www.opensource.org/licenses/bsd-license.php  BSD License
- * @link        http://zf-commons.github.com
+ * @link        https://github.com/LM-Commons
  */
 
-namespace ZfcAdmin;
+namespace LmcAdmin;
 
-use Zend\Loader;
-use Zend\EventManager\EventInterface;
-use Zend\Mvc\MvcEvent;
-use Zend\Mvc\Router\RouteMatch as V2RouteMatch;
-use Zend\Router\RouteMatch as V3RouteMatch;
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Laminas\Loader;
+use Laminas\EventManager\EventInterface;
+use Laminas\Mvc\MvcEvent;
+use Laminas\Router\RouteMatch as V3RouteMatch;
+use Laminas\ServiceManager\Factory\InvokableFactory;
 
 /**
- * Module class for ZfcAdmin
+ * Module class for LmcAdmin
  *
- * @package ZfcAdmin
+ * @package LmcAdmin
  */
 class Module
 {
-    /**
-     * @{inheritdoc}
-     */
-    public function getAutoloaderConfig()
-    {
-        return [
-            Loader\AutoloaderFactory::STANDARD_AUTOLOADER => [
-                Loader\StandardAutoloader::LOAD_NS => [
-                    __NAMESPACE__ => __DIR__,
-                ],
-            ],
-        ];
-    }
 
     /**
      * @{inheritdoc}
@@ -79,7 +65,7 @@ class Module
         return [
             'service_manager' => $provider->getDependencyConfig(),
             'view_manager' => $provider->getViewManagerConfig(),
-            'zfcadmin' => $provider->getModuleConfig(),
+            'lmcadmin' => $provider->getModuleConfig(),
             'controllers' => [
                 'factories' => [
                     Controller\AdminController::class => InvokableFactory::class,
@@ -90,7 +76,7 @@ class Module
             ],
             'router' => [
                 'routes' => [
-                    'zfcadmin' => [
+                    'lmcadmin' => [
                         'type' => 'literal',
                         'options' => [
                             'route' => '/admin',
@@ -111,7 +97,7 @@ class Module
      */
     public function onBootstrap(EventInterface $e)
     {
-        /** @var \Zend\Mvc\Application $app */
+        /** @var \Laminas\Mvc\Application $app */
         $app = $e->getParam('application');
         $em  = $app->getEventManager();
 
@@ -126,25 +112,25 @@ class Module
      */
     public function selectLayoutBasedOnRoute(MvcEvent $e)
     {
-        /** @var \Zend\Mvc\Application $app */
+        /** @var \Laminas\Mvc\Application $app */
         $app    = $e->getParam('application');
         $sm     = $app->getServiceManager();
         $config = $sm->get('config');
 
-        if (false === $config['zfcadmin']['use_admin_layout']) {
+        if (false === $config['lmcadmin']['use_admin_layout']) {
             return;
         }
 
         $match      = $e->getRouteMatch();
         $controller = $e->getTarget();
-        if (!($match instanceof V2RouteMatch || $match instanceof V3RouteMatch)
-            || 0 !== strpos($match->getMatchedRouteName(), 'zfcadmin')
+        if (!($match instanceof V3RouteMatch)
+            || 0 !== strpos($match->getMatchedRouteName(), 'lmcadmin')
             || $controller->getEvent()->getResult()->terminate()
         ) {
             return;
         }
 
-        $layout     = $config['zfcadmin']['admin_layout_template'];
+        $layout     = $config['lmcadmin']['admin_layout_template'];
         $controller->layout($layout);
     }
 }

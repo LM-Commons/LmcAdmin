@@ -8,7 +8,7 @@ Created by [Jurian Sluiman](http://juriansluiman.nl) and [Martin Shwalbe](https:
 LmcAdmin is a minimal admin interface for generic administrative purposes. It is a common screen with navigation that hides behind authentication and authorization.
 
 ## Installation
-LmcAdmin is enabled to be installed via composer. Load `lm-commons/lmc-admin` in your `composer.json` file. You can specify its version (currently only 0.1.0 is recommended) or use `dev-master` to load the latest version from master. Enable LmcAdmin in your `module.config.php` configuration file.
+LmcAdmin is enabled to be installed via composer. Load `lm-commons/lmc-admin` in your `composer.json` file. You can specify its version (currently only 1.0.0 is recommended) or use `dev-master` to load the latest version from master. Enable LmcAdmin in your `module.config.php` configuration file.
 
 If you do not want to use composer, clone this project (either as a git submodule or not) into `./vendor/` directory.
 

@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.3 || ^8.0",
         "laminas/laminas-modulemanager": "^2.5",
         "laminas/laminas-loader": "^2.6",
         "laminas/laminas-eventmanager": "^3.0",

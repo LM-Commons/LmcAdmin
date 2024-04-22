@@ -6,6 +6,8 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const ProjectName = 'LmcAdmin';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'LmcAdmin',
@@ -21,7 +23,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
     organizationName: 'lm-commons',
-    projectName: 'LmcAdmin',
+    projectName: ProjectName,
     trailingSlash: false,
 
     onBrokenLinks: 'throw',
@@ -75,7 +77,7 @@ themeConfig:
             items: [
             {
                 type: 'docSidebar',
-                sidebarId: 'tutorialSidebar',
+                sidebarId: 'documentationSidebar',
                 position: 'left',
                 label: 'Documentation',
             },
@@ -86,7 +88,7 @@ themeConfig:
                     position: 'right',
             },
             {
-                href: 'https://github.com/lm-commons/lmcadmin',
+                href: `https://github.com/lm-commons/${ProjectName.toLowerCase()}`,
                 label: 'GitHub',
                 position: 'right',
             },
@@ -122,7 +124,7 @@ themeConfig:
                 },
                 {
                     label: 'GitHub',
-                    href: 'https://github.com/lm-commons/lmcmail',
+                    href: `https://github.com/lm-commons/${ProjectName.toLowerCase()}`,
                 },
                 ],
             },

@@ -1,6 +1,8 @@
->
-> This is work in progress to convert to Laminas
->
+[![Latest Stable Version](https://poser.pugx.org/lm-commons/lmc-admin/v/stable)](https://packagist.org/packages/lm-commons/lmc-admin)
+[![Total Downloads](http://poser.pugx.org/lm-commons/lmc-admin/downloads)](https://packagist.org/packages/lm-commons/lmc-admin)
+[![License](http://poser.pugx.org/lm-commons/lmc-admin/license)](https://packagist.org/packages/lm-commons/lmc-admin)
+[![PHP Version Require](http://poser.pugx.org/lm-commons/lmc-admin/require/php)](https://packagist.org/packages/lm-commons/lmc-admin)
+
 # LmcAdmin Module for Laminas Framework
 Created by [Jurian Sluiman](http://juriansluiman.nl) and [Martin Shwalbe](https://github.com/Hounddog).
 
@@ -15,7 +17,7 @@ If you do not want to use composer, clone this project (either as a git submodul
 ## Usage
 LmcAdmin allows you to create routes under a single parent "admin" route. You can also use it to enable navigation in your admin layout. Furthermore integration of [LmcRbacMvc](https://github.com/LM-Commons/LmcRbacMvc) is provided.
 
-The complete configuration is flexible, so you can update the zfcadmin parent route, its children, the navigation and all default provided view scripts. Read more in the [documentation](docs/1.Introduction.md) about usage and customization of LmcAdmin.
+The complete configuration is flexible, so you can update the zfcadmin parent route, its children, the navigation and all default provided view scripts. Read more in the [documentation](docs-old/1.Introduction.md) about usage and customization of LmcAdmin.
 
 ## Development
 LmcAdmin is currently under development. The authors feel LmcAdmin is stable enough for production versions and you can always fix your LmcAdmin version to a specific tag.
@@ -23,4 +25,4 @@ LmcAdmin is currently under development. The authors feel LmcAdmin is stable eno
 ## Support
 
 - File issues at https://github.com/LM-Commons/LmcAdmin/issues.
-- Ask questions in the [LM-Commons gitter](https://gitter.im/LM-Commons/community) chat.
+- Ask questions in the [LM-Commons Slack](https://join.slack.com/t/lm-commons/shared_invite/zt-2gankt2wj-FTS45hp1W~JEj1tWvDsUHQ) chat.

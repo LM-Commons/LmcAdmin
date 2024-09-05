@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[760],{9971:s=>{s.exports=JSON.parse('{"label":"PHP","permalink":"/LmcAdmin/blog/tags/php","allTagsPath":"/LmcAdmin/blog/tags","count":1,"unlisted":false}')}}]);

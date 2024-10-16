@@ -590,39 +590,39 @@
         },
         {
             "name": "laminas/laminas-navigation",
-            "version": "2.19.1",
+            "version": "2.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-navigation.git",
-                "reference": "2ef88f68066381698b528be7fdd001723458a479"
+                "reference": "95f63e660faeb8baff538ed5f8ebde02625c8d14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-navigation/zipball/2ef88f68066381698b528be7fdd001723458a479",
-                "reference": "2ef88f68066381698b528be7fdd001723458a479",
+                "url": "https://api.github.com/repos/laminas/laminas-navigation/zipball/95f63e660faeb8baff538ed5f8ebde02625c8d14",
+                "reference": "95f63e660faeb8baff538ed5f8ebde02625c8d14",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-stdlib": "^2.7 || ^3.0",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "conflict": {
                 "zendframework/zend-navigation": "*"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~2.5.0",
-                "laminas/laminas-config": "^3.8.0",
-                "laminas/laminas-http": "^2.18",
-                "laminas/laminas-i18n": "^2.21",
-                "laminas/laminas-mvc": "^3.6",
-                "laminas/laminas-permissions-acl": "^2.13",
-                "laminas/laminas-router": "^3.11.1",
-                "laminas/laminas-servicemanager": "^3.20",
-                "laminas/laminas-uri": "^2.10.0",
-                "laminas/laminas-view": "^2.26",
-                "phpunit/phpunit": "^9.5.28",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.6"
+                "laminas/laminas-coding-standard": "~3.0.1",
+                "laminas/laminas-config": "^3.9.0",
+                "laminas/laminas-http": "^2.19",
+                "laminas/laminas-i18n": "^2.29",
+                "laminas/laminas-mvc": "^3.7",
+                "laminas/laminas-permissions-acl": "^2.16",
+                "laminas/laminas-router": "^3.14.0",
+                "laminas/laminas-servicemanager": "^3.22.1",
+                "laminas/laminas-uri": "^2.12.0",
+                "laminas/laminas-view": "^2.35",
+                "phpunit/phpunit": "^9.6.21",
+                "psalm/plugin-phpunit": "^0.19.0",
+                "vimeo/psalm": "^5.26.1"
             },
             "suggest": {
                 "laminas/laminas-config": "^3.7, to provide page configuration (optional, as arrays and Traversables are also allowed)",
@@ -667,7 +667,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-01-10T15:11:10+00:00"
+            "time": "2024-10-16T18:20:23+00:00"
         },
         {
             "name": "laminas/laminas-router",
@@ -5496,12 +5496,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

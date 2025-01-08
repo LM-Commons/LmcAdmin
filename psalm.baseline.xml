@@ -1,3 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.25.0@01a8eb06b9e9cc6cfb6a320bf9fb14331919d505">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+  <file src="src/Listener/LayoutTemplateSelectListener.php">
+    <MixedMethodCall>
+      <code><![CDATA[terminate]]></code>
+    </MixedMethodCall>
+    <PossiblyNullReference>
+      <code><![CDATA[getMatchedRouteName]]></code>
+    </PossiblyNullReference>
+  </file>
+  <file src="src/Listener/LayoutTemplateSelectListenerFactory.php">
+    <MixedArgument>
+      <code><![CDATA[$container->get(ModuleOptions::class)]]></code>
+    </MixedArgument>
+  </file>
+  <file src="src/Navigation/Service/AdminNavigationFactory.php">
+    <DeprecatedInterface>
+      <code><![CDATA[AdminNavigationFactory]]></code>
+    </DeprecatedInterface>
+  </file>
+  <file src="src/Options/ModuleOptions.php">
+    <MissingParamType>
+      <code><![CDATA[$options]]></code>
+    </MissingParamType>
+    <MixedArgument>
+      <code><![CDATA[$options]]></code>
+    </MixedArgument>
+  </file>
+  <file src="src/Options/ModuleOptionsFactory.php">
+    <MixedArrayAccess>
+      <code><![CDATA[$config['lmc_admin']]]></code>
+    </MixedArrayAccess>
+    <MixedAssignment>
+      <code><![CDATA[$config]]></code>
+      <code><![CDATA[$options]]></code>
+    </MixedAssignment>
+  </file>
+  <file src="test/Assets/TestController.php">
+    <PossiblyUnusedMethod>
+      <code><![CDATA[terminateAction]]></code>
+    </PossiblyUnusedMethod>
+  </file>
 </files>

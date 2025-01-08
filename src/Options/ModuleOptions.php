@@ -6,6 +6,10 @@ namespace Lmc\Admin\Options;
 
 use Laminas\Stdlib\AbstractOptions;
 
+/**
+ * @template TValue
+ * @extends AbstractOptions<TValue>
+ */
 class ModuleOptions extends AbstractOptions
 {
     protected bool $useAdminLayout = true;

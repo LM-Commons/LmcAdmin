@@ -13,8 +13,11 @@ class LayoutTemplateSelectListenerFactory implements FactoryInterface
     /**
      * @inheritDoc
      */
-    public function __invoke(ContainerInterface $container, $requestedName, ?array $options = null)
-    {
+    public function __invoke(
+        ContainerInterface $container,
+        $requestedName,
+        ?array $options = null
+    ): LayoutTemplateSelectListener {
         return new LayoutTemplateSelectListener($container->get(ModuleOptions::class));
     }
 }

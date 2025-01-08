@@ -6,6 +6,7 @@ namespace Lmc\Admin\Listener;
 
 use Laminas\EventManager\AbstractListenerAggregate;
 use Laminas\EventManager\EventManagerInterface;
+use Laminas\Mvc\Controller\AbstractController;
 use Laminas\Mvc\MvcEvent;
 use Lmc\Admin\Options\ModuleOptions;
 
@@ -32,6 +33,7 @@ class LayoutTemplateSelectListener extends AbstractListenerAggregate
         }
 
         $routeMatch = $event->getRouteMatch();
+        /** @var AbstractController $controller */
         $controller = $event->getTarget();
         if (
             ! str_starts_with($routeMatch->getMatchedRouteName(), 'lmcadmin')

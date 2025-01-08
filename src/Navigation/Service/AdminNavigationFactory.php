@@ -14,7 +14,7 @@ class AdminNavigationFactory extends DefaultNavigationFactory
     /**
      * @inheritDoc
      */
-    protected function getName()
+    protected function getName(): string
     {
         return 'admin';
     }

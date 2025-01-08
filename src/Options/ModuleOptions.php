@@ -1,21 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lmc\Admin\Options;
 
 use Laminas\Stdlib\AbstractOptions;
 
+/**
+ * @template TValue
+ * @extends AbstractOptions<TValue>
+ */
 class ModuleOptions extends AbstractOptions
 {
     protected bool $useAdminLayout = true;
 
     protected string $adminLayoutTemplate = 'layout/lmcadmin';
 
+    /**
+     * @inheritDoc
+     */
     public function __construct($options = null)
     {
         $this->__strictMode__ = false;
         parent::__construct($options);
     }
-
 
     public function getUseAdminLayout(): bool
     {

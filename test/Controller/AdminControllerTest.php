@@ -1,21 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LmcTest\Admin\Controller;
 
 use Laminas\Test\PHPUnit\Controller\AbstractControllerTestCase;
 
 class AdminControllerTest extends AbstractControllerTestCase
 {
-    /*
-    public function setUp(): void
-    {
-        $this->setApplicationConfig(
-            include __DIR__ . '/../test.application.config.php'
-        );
-        parent::setUp();
-    }
-    */
-
     public function testIndexAction(): void
     {
         $this->setApplicationConfig(
@@ -30,7 +22,7 @@ class AdminControllerTest extends AbstractControllerTestCase
     {
         $this->setApplicationConfig(
             [
-                'modules' => [
+                'modules'                 => [
                     'Laminas\Navigation',
                     'Laminas\Router',
                     'Lmc\Admin',
@@ -39,8 +31,7 @@ class AdminControllerTest extends AbstractControllerTestCase
                     'config_glob_paths' => [
                         __DIR__ . '/testing.config.php',
                     ],
-                    'module_paths' => [
-                    ],
+                    'module_paths'      => [],
                 ],
             ]
         );

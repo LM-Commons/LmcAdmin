@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LmcTest\Admin\Options;
 
 use Lmc\Admin\Options\ModuleOptions;
@@ -17,7 +19,7 @@ class ModuleOptionsTest extends TestCase
     public function testOptions(): void
     {
         $options = new ModuleOptions([
-            'useAdminLayout' => false,
+            'useAdminLayout'      => false,
             'adminLayoutTemplate' => 'foo/bar',
         ]);
         $this->assertEquals(false, $options->getUseAdminLayout());

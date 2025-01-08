@@ -1,38 +1,34 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LmcTest\Admin\Listener;
 
-use Laminas\Mvc\ApplicationInterface;
-use Laminas\Mvc\Controller\AbstractActionController;
-use Laminas\Mvc\Controller\AbstractController;
+use Laminas\EventManager\EventManagerInterface;
 use Laminas\Mvc\MvcEvent;
-use Laminas\Router\RouteMatch;
 use Laminas\Test\PHPUnit\Controller\AbstractControllerTestCase;
-use Laminas\View\Model\ViewModel;
-use Lmc\Admin\Controller\AdminController;
 use Lmc\Admin\Listener\LayoutTemplateSelectListener;
 use Lmc\Admin\Options\ModuleOptions;
-use PHPUnit\Framework\TestCase;
-use stdClass;
 
 class LayoutTemplateSelectListenerTest extends AbstractControllerTestCase
 {
     public function testAttach(): void
     {
-        $events = $this->createMock('Laminas\EventManager\EventManagerInterface');
+        $events        = $this->createMock(EventManagerInterface::class);
         $moduleOptions = new ModuleOptions([]);
-        $listener = new LayoutTemplateSelectListener($moduleOptions);
-        $priority = 10;
+        $listener      = new LayoutTemplateSelectListener($moduleOptions);
+        $priority      = 10;
         $events->expects($this->once())->method('attach')->with(
             MvcEvent::EVENT_DISPATCH,
             [$listener, 'selectLayoutBasedOnRoute'],
-            $priority);
+            $priority
+        );
         $listener->attach($events, $priority);
     }
 
     public function testUseAdminLayoutFalse(): void
     {
-        $event = $this->createMock(MvcEvent::class);
+        $event         = $this->createMock(MvcEvent::class);
         $moduleOptions = new ModuleOptions([
             'use_admin_layout' => false,
         ]);
@@ -60,7 +56,7 @@ class LayoutTemplateSelectListenerTest extends AbstractControllerTestCase
     {
         $this->setApplicationConfig(
             [
-                'modules' => [
+                'modules'                 => [
                     'Laminas\Router',
                     'Lmc\Admin',
                 ],
@@ -82,7 +78,7 @@ class LayoutTemplateSelectListenerTest extends AbstractControllerTestCase
     {
         $this->setApplicationConfig(
             [
-                'modules' => [
+                'modules'                 => [
                     'Laminas\Router',
                     'Lmc\Admin',
                 ],
@@ -90,13 +86,13 @@ class LayoutTemplateSelectListenerTest extends AbstractControllerTestCase
                     'config_glob_paths' => [
                         __DIR__ . '/testing.config.php',
                     ],
-                    'module_paths' => [
-                    ],
+                    'module_paths'      => [],
                 ],
             ]
         );
 
-        // Listener should not set the layout template to layout/admin or layout/layout because the view is set to terminate
+        // Listener should not set the layout template to layout/admin or layout/layout
+        // because the view is set to terminate
         $this->dispatch('/admin/terminate');
         $this->assertResponseStatusCode(200);
         $this->assertNotTemplateName('layout/layout');

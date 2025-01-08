@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace Lmc\Admin\Navigation\Service;
 
@@ -7,14 +8,13 @@ use Laminas\Navigation\Service\DefaultNavigationFactory;
 
 /**
  * Factory for the LmcAdmin admin navigation
- *
  */
 class AdminNavigationFactory extends DefaultNavigationFactory
 {
     /**
-     * @{inheritdoc}
+     * @inheritDoc
      */
-    protected function getName()
+    protected function getName(): string
     {
         return 'admin';
     }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LmcTest\Admin\Options;
 
 use Lmc\Admin\Options\ModuleOptions;
@@ -11,7 +13,7 @@ class ModuleOptionsFactoryTest extends TestCase
 {
     public function testFactoryNoConfig(): void
     {
-        $config = [];
+        $config    = [];
         $container = $this->createMock(ContainerInterface::class);
         $container->expects($this->once())->method('get')->with('config')->willReturn($config);
         $factory = new ModuleOptionsFactory();
@@ -21,9 +23,9 @@ class ModuleOptionsFactoryTest extends TestCase
 
     public function testFactoryConfig(): void
     {
-        $config = [
+        $config    = [
             'lmc_admin' => [
-                'use_admin_layout' => false,
+                'use_admin_layout'      => false,
                 'admin_layout_template' => 'foo/bar',
             ],
         ];

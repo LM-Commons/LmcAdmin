@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
 
 namespace Lmc\Admin\Controller;
 
@@ -36,7 +37,7 @@ use Laminas\View\Model\ViewModel;
  */
 class AdminController extends AbstractActionController
 {
-    public function indexAction()
+    public function indexAction(): ViewModel
     {
         $view = new ViewModel();
         $view->setTemplate('lmc-admin/admin/index');

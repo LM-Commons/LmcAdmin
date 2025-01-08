@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace LmcTest\Admin\Listener;
 
 use Lmc\Admin\Listener\LayoutTemplateSelectListener;
@@ -12,10 +14,10 @@ class LayoutTemplateSelectListenerFactoryTest extends TestCase
 {
     public function testFactory(): void
     {
-        $options = new ModuleOptions();
+        $options   = new ModuleOptions();
         $container = $this->createMock(ContainerInterface::class);
         $container->expects($this->once())->method('get')->willReturn($options);
-        $factory = new LayoutTemplateSelectListenerFactory();
+        $factory  = new LayoutTemplateSelectListenerFactory();
         $listener = $factory($container, '');
         $this->assertInstanceOf(LayoutTemplateSelectListener::class, $listener);
     }

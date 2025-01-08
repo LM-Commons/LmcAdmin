@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 return [
-    'modules' => [
+    'modules'                 => [
         'Laminas\Navigation',
         'Laminas\Router',
         'Lmc\Admin',
@@ -10,8 +12,6 @@ return [
         'config_glob_paths' => [
             __DIR__ . '/testing.config.php',
         ],
-        'module_paths' => [
-        ],
+        'module_paths'      => [],
     ],
 ];
-

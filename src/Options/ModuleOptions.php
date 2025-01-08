@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Lmc\Admin\Options;
 
 use Laminas\Stdlib\AbstractOptions;
@@ -10,12 +12,14 @@ class ModuleOptions extends AbstractOptions
 
     protected string $adminLayoutTemplate = 'layout/lmcadmin';
 
+    /**
+     * @inheritDoc
+     */
     public function __construct($options = null)
     {
         $this->__strictMode__ = false;
         parent::__construct($options);
     }
-
 
     public function getUseAdminLayout(): bool
     {

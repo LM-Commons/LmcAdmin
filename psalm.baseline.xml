@@ -17,6 +17,12 @@
     <DeprecatedInterface>
       <code><![CDATA[AdminNavigationFactory]]></code>
     </DeprecatedInterface>
+    <InvalidExtendClass>
+      <code><![CDATA[DefaultNavigationFactory]]></code>
+    </InvalidExtendClass>
+    <MethodSignatureMismatch>
+      <code><![CDATA[protected function getName(): string]]></code>
+    </MethodSignatureMismatch>
   </file>
   <file src="src/Options/ModuleOptions.php">
     <MissingParamType>

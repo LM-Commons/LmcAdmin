@@ -1,9 +1,11 @@
 # LmcAdmin Module for Laminas Framework
 
+[![Build](https://github.com/lm-commons/LmcAdmin/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/lm-commons/LmcAdmin/actions/workflows/continous-integration.yml)
 [![Latest Stable Version](https://poser.pugx.org/lm-commons/lmc-admin/v/stable)](https://packagist.org/packages/lm-commons/lmc-admin)
 [![Total Downloads](http://poser.pugx.org/lm-commons/lmc-admin/downloads)](https://packagist.org/packages/lm-commons/lmc-admin)
 [![License](http://poser.pugx.org/lm-commons/lmc-admin/license)](https://packagist.org/packages/lm-commons/lmc-admin)
-[![PHP Version Require](http://poser.pugx.org/lm-commons/lmc-admin/require/php)](https://packagist.org/packages/lm-commons/lmc-admin)
+
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Flm-commons%2FLmcAdmin%2Fproperties%2Fvalues&query=%24%5B%3A1%5D.value&label=Maintenance%20Status)
 
 Originally created by [Jurian Sluiman](http://juriansluiman.nl) and [Martin Shwalbe](https://github.com/Hounddog).
 
@@ -13,7 +15,7 @@ LmcAdmin is a minimal admin interface for generic administrative purposes. It is
 
 ## Requirements
 
-- PHP 8.1 or higher
+- PHP 8.2 or higher
 
 ## Installation
 

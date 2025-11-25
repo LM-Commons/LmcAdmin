@@ -29,6 +29,10 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
+    markdown: {
+        hooks: {onBrokenMarkdownLinks: 'warn'},
+    },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -52,7 +56,7 @@ const config = {
                 lastVersion: '2.0',
                 versions: {
                     "2.0": {
-                        label: '2.0',
+                        label: '2.x',
                         path: '2.0',
                     }
                 }
@@ -63,6 +67,7 @@ const config = {
               // Remove this to remove the "edit this page" links.
                 editUrl:
                 'https://github.com/lm-commons/lmcadmin/tree/master/docs/',
+                onUntruncatedBlogPosts: 'ignore',
             },
             theme: {
                 customCss: './src/css/custom.css',
@@ -110,24 +115,12 @@ themeConfig:
         footer: {
             style: 'dark',
             links: [
-                /*
-                {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Documentation',
-                            to: '/docs/Introduction',
-                        },
-                    ],
-                },
-
-                 */
                 {
                     title: 'Community',
                     items: [
                         {
-                            label: 'Slack',
-                            href: 'https://join.slack.com/t/lm-commons/shared_invite/zt-2gankt2wj-FTS45hp1W~JEj1tWvDsUHQ',
+                            label: 'Discord',
+                            href: 'https://discord.gg/nAAu7AhR',
                         },
                     ],
                 },
